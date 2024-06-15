@@ -1,9 +1,9 @@
-name: efs-to-s3 Deploy master branch
+name: inputs-to-s3 Deploy master branch
 
 on:
   push:
     paths:
-      - "efs-to-s3/**"
+      - "inputs-to-s3/**"
     branches:
       - master
 
@@ -19,10 +19,10 @@ jobs:
       - name: Upload to ECR
         working-directory: ./efs-to-s3
         run: |
-          aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/b6g9t8f1  
-          docker build -t efs-to-s3 .
-          docker tag efs-to-s3:latest public.ecr.aws/b6g9t8f1/efs-to-s3:latest
-          docker push public.ecr.aws/b6g9t8f1/efs-to-s3:latest
+          aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/i8i  
+          docker build -t inputs-to-s3 .
+          docker tag inputs-to-s3:latest public.ecr.aws/i8i/inputs-to-s3:latest
+          docker push public.ecr.aws/i8i/inputs-to-s3:latest
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
