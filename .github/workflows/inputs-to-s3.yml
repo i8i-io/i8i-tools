@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Upload to ECR
-        working-directory: ./efs-to-s3
+        working-directory: ./inputs-to-s3
         run: |
           aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/i8i  
           docker build -t inputs-to-s3 .
