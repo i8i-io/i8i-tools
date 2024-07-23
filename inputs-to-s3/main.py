@@ -121,7 +121,7 @@ def get_folders_in_directory(directory_path):
         return str(e)
     
 if __name__ == "__main__":
-    bucket = os.environ.get("i8i_OUTPUT_S3_BUCKET")
+    bucket = os.environ.get("i8i_STORAGE_S3_BUCKET")
     s3_prefix = os.environ.get("i8i_OUTPUT_S3_PREFIX")
     region = os.environ.get("AWS_REGION")
     
