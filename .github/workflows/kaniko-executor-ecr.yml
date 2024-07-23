@@ -2,8 +2,8 @@ name: kaniko-executor-ecr Deploy master branch
 
 on:
   push:
-    #paths:
-    #  - "kaniko-executor-ecr/**"
+    paths:
+      - "kaniko-executor-ecr/**"
     branches:
       - master
 

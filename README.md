@@ -1,3 +1,3 @@
 # i8i Tools
 
-This repo contains code of some prebuild docker images to use freely to ease developers jobs.
+This repo contains codes of docker images used by i8i system.
