@@ -127,7 +127,7 @@ if __name__ == "__main__":
     
     folders = get_folders_in_directory("/input")
     for folder in folders:
-        s3_key = f'{s3_prefix}{folder}-outputs-{int(time.time())}.zip'
+        s3_key = f'{s3_prefix}{folder}.zip'
         directory_path = f'/input/{folder}'
         uploaded_file_url = zip_and_multipart_upload_directory(directory_path, bucket, s3_key, region)
     

@@ -11,5 +11,4 @@ Required parameters(environment variables):
 ```
 i8i_OUTPUT_S3_BUCKET(required)
 i8i_OUTPUT_S3_PREFIX(required)
-REGION
 ```
