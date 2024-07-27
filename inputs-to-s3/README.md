@@ -9,6 +9,6 @@ Image URI [public.ecr.aws/i8i/inputs-to-s3:latest](https://gallery.ecr.aws/i8i/i
 Required parameters(environment variables):
 
 ```
-i8i_OUTPUT_S3_BUCKET(required)
+i8i_STORAGE_S3_BUCKET(required)
 i8i_OUTPUT_S3_PREFIX(required)
 ```
